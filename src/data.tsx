@@ -1,9 +1,9 @@
-export type TaskType = 'goal' | 'challenge'
-
 export interface IColletion {
     img: string
     name: string
 }
+
+export type TaskType = 'goal' | 'challenge'
 
 export interface ITask {
     id: number
