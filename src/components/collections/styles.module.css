@@ -1,0 +1,99 @@
+.collectionContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.buttonsSection {
+    display: flex;
+    width: 100%;
+    padding: 0px 5px 0px 5px;
+    margin-bottom: 21px;
+    cursor: pointer;
+}
+
+.tabButton {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 1px rgba(231, 231, 231, 0.5); 
+}
+
+.tabButton__active {
+    background: #EEF8FF;
+}
+
+.tabButton__feed {
+    border-radius: 15px 0px 0px 0px;
+}
+
+.tabButton__discussions {
+    border-radius: 0px 15px 0px 0px;
+}
+
+.tabButton > img {
+    margin-right: 10px;
+}
+
+.collectionsSection {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.collectionsTitle {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px; 
+    align-self: start;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel__prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel__next {
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carouselItem {
+    position: relative;
+    margin: 10px 0px 0px 0px;
+    padding: 3px;
+    height: 190px;
+}
+
+.carouselItem__img {
+    width: 98%;
+    height: 98%;
+    border-radius: 15px;
+}
+
+.carouselItem__name {
+    position: absolute;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #FFFFFF;
+    bottom: 17px;
+    left: 10px;
+}
+
+/* :global(.slick-list) {
+    overflow: hidden; 
+}
+ */

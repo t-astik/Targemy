@@ -1,0 +1,13 @@
+.tasks {
+  text-align: center;
+  width: 390px;
+  margin: 0 auto;
+  align-self: center;
+  font-family: 'Open Sans';
+}
+
+@media (max-width: 390px) {
+  .tasks {
+    width: 100%;
+  }
+}
