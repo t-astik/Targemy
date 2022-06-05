@@ -6,10 +6,10 @@ import classNames from 'classnames'
 import { task, IColletion } from '../../data'
 import { getImagePath } from '../task'
 
-import feed from '../../assets/images/feedMob.png'
-import discussions from '../../assets/images/discussionMob.png'
-import arrowPrev from '../../assets/images/arrowPrev.png'
-import arrowNext from '../../assets/images/arrowNext.png'
+import feed from '../../assets/images/feedMob.svg'
+import discussions from '../../assets/images/discussionMob.svg'
+import arrowPrev from '../../assets/images/arrowPrev.svg'
+import arrowNext from '../../assets/images/arrowNext.svg'
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -87,20 +87,22 @@ const Collections = () => {
                 <div className={styles.carousel}>
                     <Slider ref={sliderRef} {...settings}>
                         {task.collections.map((img: IColletion, i) => {
+                            console.log('asdads', getImagePath(img.img))
                             return (
                                 <div className={styles.carouselItem} key={i}>
-                                    <img className={styles.carouselItem__img} src={getImagePath(img.img)}/>
-                                    <div className={styles.carouselItem__name}>{img.name}</div>
+                                    <div className={styles.carouselItem__img} style={{'backgroundImage': `url(${getImagePath(img.img)}`}}>
+                                        <div className={styles.carouselItem__name}>{img.name}</div>
+                                    </div>
                                 </div>
                             )
                         })}
                     </Slider>
-                    <div onClick={handleClickPrev} className={styles.carousel__prev}>
+                    <button onClick={handleClickPrev} className={styles.carousel__prev}>
                         <img src={arrowPrev}/>
-                    </div>
-                    <div onClick={handleClickNext} className={styles.carousel__next}>
+                    </button>
+                    <button onClick={handleClickNext} className={styles.carousel__next}>
                         <img src={arrowNext}/>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>

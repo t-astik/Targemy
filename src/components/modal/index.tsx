@@ -4,7 +4,7 @@ import moment from 'moment'
 import { task } from '../../data'
 import { getImagePath, getTaskTypeIcon } from '../task/index'
 
-import closeButton from '../../assets/images/closeButton.png'
+import closeButton from '../../assets/images/closeButton.svg'
 
 import styles from './styles.module.css'
 
@@ -36,9 +36,9 @@ const Modal = (props: IProps) => {
                             <div className={styles.title}>
                                 Информация
                             </div>  
-                            <div className={styles.closeButton} onClick={props.onHide}>
+                            <button className={styles.closeButton} onClick={props.onHide}>
                                 <img src={closeButton}/>
-                            </div>
+                            </button>
                         </div> 
                         <div className={styles.body}>
                             <div className={styles.section}>

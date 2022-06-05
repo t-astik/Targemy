@@ -5,6 +5,9 @@
     padding: 10px 16px 10px 16px;
 }
 
-
-
+button {
+    padding: 0px;
+    border: none;
+    background: no-repeat;
+}
 

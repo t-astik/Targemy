@@ -1,0 +1,32 @@
+<svg width="34" height="34" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="34" width="34" y="0" x="0" id="filter0_d_1_214">
+   <feGaussianBlur stdDeviation="1"/>
+  </filter>
+  <linearGradient y2="1" x2="-0.099233" y1="-0.198465" x1="-0.099233" id="paint0_linear_1_214">
+   <stop stop-color="#F5F4FF"/>
+   <stop stop-color="#D2E7FF" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="-1.029696" x2="0.650505" y1="0.739014" x1="-0.72822" id="paint1_linear_1_214">
+   <stop stop-color="#2B17E4"/>
+   <stop stop-color="#5937B9" offset="0.529904"/>
+   <stop stop-color="#C86DD7" offset="1"/>
+  </linearGradient>
+  <linearGradient y2="-1.029696" x2="0.650505" y1="0.739014" x1="-0.72822" id="paint2_linear_1_214">
+   <stop stop-color="#2B17E4"/>
+   <stop stop-color="#5937B9" offset="0.529904"/>
+   <stop stop-color="#C86DD7" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1" filter="url(#filter0_d_1_214)">
+   <circle id="svg_2" fill="url(#paint0_linear_1_214)" r="15" cy="17" cx="17"/>
+  </g>
+  <path transform="rotate(180 16.574134826660156,17.14333724975586) " id="svg_3" stroke="url(#paint2_linear_1_214)" fill="url(#paint1_linear_1_214)" d="m20.9056,11.3693c0.6067,-0.6205 0.602,-1.61347 -0.0105,-2.22827c-0.625,-0.6273 -1.6427,-0.6213 -2.2602,0.01333l-6.2775,6.45084c-0.7556,0.7764 -0.7556,2.0132 0,2.7896l6.7549,6.9415c0.3551,0.3649 0.9402,0.3683 1.2995,0.0077c0.8805,-0.8837 0.8872,-2.3109 0.0151,-3.2028l-5.0269,-5.1412l5.5056,-5.6307z"/>
+ </g>
+</svg>

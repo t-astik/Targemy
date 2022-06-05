@@ -59,7 +59,10 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
+    left: 0%;
     transform: translateY(-50%);
+    border: none;
+    background: no-repeat;
 }
 
 .carousel__next {
@@ -68,6 +71,8 @@
     right: 0%;
     top: 50%;
     transform: translateY(-50%);
+    border: none;
+    background: no-repeat;
 }
 
 .carouselItem {
@@ -78,9 +83,11 @@
 }
 
 .carouselItem__img {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .carouselItem__name {

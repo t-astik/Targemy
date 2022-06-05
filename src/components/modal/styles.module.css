@@ -28,6 +28,12 @@
     margin-bottom: 26px;
 }
 
+.closeButton {
+    padding: 0px;
+    border: none;
+    background: no-repeat;
+}
+
 .title {
     font-weight: 600;
     font-size: 14px;
@@ -67,6 +73,8 @@
 }
 
 .authorSection > img {
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 

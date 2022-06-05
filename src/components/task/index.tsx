@@ -5,11 +5,11 @@ import classNames from 'classnames'
 import { ITask, task } from '../../data'
 import Modal from '../modal'
 
-import iconFollow from '../../assets/images/iconFollow.png'
-import infoButton from '../../assets/images/info.png'
-import goalIcon from '../../assets/images/goalIcon.png'
-import challengeIcon from '../../assets/images/challengeIcon.png'
-import borderStories from '../../assets/images/borderStoreis.png'
+import iconFollow from '../../assets/images/iconFollow.svg'
+import infoButton from '../../assets/images/info.svg'
+import goalIcon from '../../assets/images/goalIcon.svg'
+import challengeIcon from '../../assets/images/challengeIcon.svg'
+import borderStories from '../../assets/images/borderStoreis.svg'
 
 import styles from './styles.module.css'
 
@@ -49,9 +49,9 @@ const Task = () => {
         <div className={styles.taskContainer}>
             <div className={styles.taskSection} style={{'backgroundImage': `url(${getImagePath(task.taskBackground)}`}}>
                 <div className={styles.taskHead}>
-                    <div onClick={handleShow}>
-                        <img className={styles.infoButton__img} src={infoButton}/>  
-                    </div>
+                    <button onClick={handleShow} className={styles.infoButton__img}>
+                        <img src={infoButton}/>  
+                    </button>
                 </div>
                 <div className={styles.taskBody}>
                     <div className={styles.taskAvatar}>
