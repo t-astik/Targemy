@@ -1,5 +1,6 @@
 import { useState, createRef } from 'react'
 
+import AliceCarousel from 'react-alice-carousel'
 import Slider from 'react-slick'
 import classNames from 'classnames'
 
@@ -11,6 +12,7 @@ import discussions from '../../assets/images/discussionMob.svg'
 import arrowPrev from '../../assets/images/arrowPrev.svg'
 import arrowNext from '../../assets/images/arrowNext.svg'
 
+import "react-alice-carousel/lib/alice-carousel.css"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import styles from './styles.module.css'
@@ -26,6 +28,22 @@ const Collections = () => {
         slidesToShow: 3,
         slidesToScroll: 1     
     }
+
+    const responsive = {
+        240: { items: 1 },
+        250: { items: 2 },
+        260: { items: 3 },
+    }
+
+    const items = task.collections.map((img: IColletion, i) => {
+        return (
+            <div className={styles.carouselItem} key={i}>
+                <div className={styles.carouselItem__img} style={{'backgroundImage': `url(${getImagePath(img.img)}`}}>
+                    <div className={styles.carouselItem__name}>{img.name}</div>
+                </div>
+            </div>
+        )
+    })
 
     type TabType = 'feed' | 'discussions'
 
@@ -48,21 +66,21 @@ const Collections = () => {
         }
     ]
 
-    const sliderRef: any = createRef()
-
     const handleTabClick = (tab: ITab) => () => {
         setActiveTabType(tab.type)
     }
 
-    const handleClickPrev = (e: any) => {
-        e.stopPropagation();
-        sliderRef.current.slickPrev();
-    }
+    // const sliderRef: any = createRef()
 
-    const handleClickNext = (e: any) => {
-        e.stopPropagation();
-        sliderRef.current.slickNext();
-    }
+    // const handleClickPrev = (e: any) => {
+    //     e.stopPropagation();
+    //     sliderRef.current.slidePrev();
+    // }
+
+    // const handleClickNext = (e: any) => {
+    //     e.stopPropagation();
+    //     sliderRef.current.slideNext();
+    // }
 
     return (
         <div className={styles.collectionContainer}>
@@ -85,24 +103,28 @@ const Collections = () => {
             <div className={styles.collectionsSection}>
                 <div className={styles.collectionsTitle}>Коллекции</div>
                 <div className={styles.carousel}>
-                    <Slider ref={sliderRef} {...settings}>
-                        {task.collections.map((img: IColletion, i) => {
-                            console.log('asdads', getImagePath(img.img))
+                    <AliceCarousel
+                        mouseTracking
+                        items={items}
+                        responsive={responsive}
+                        controlsStrategy="alternate"
+                        infinite={true}
+                        disableDotsControls={true}
+                        renderPrevButton={() => {
                             return (
-                                <div className={styles.carouselItem} key={i}>
-                                    <div className={styles.carouselItem__img} style={{'backgroundImage': `url(${getImagePath(img.img)}`}}>
-                                        <div className={styles.carouselItem__name}>{img.name}</div>
-                                    </div>
-                                </div>
+                                <button className={styles.carousel__prev}>
+                                    <img src={arrowPrev}/>
+                                </button>
                             )
-                        })}
-                    </Slider>
-                    <button onClick={handleClickPrev} className={styles.carousel__prev}>
-                        <img src={arrowPrev}/>
-                    </button>
-                    <button onClick={handleClickNext} className={styles.carousel__next}>
-                        <img src={arrowNext}/>
-                    </button>
+                        }}
+                        renderNextButton={() => {
+                            return (
+                                <button className={styles.carousel__next}>
+                                    <img  src={arrowPrev}/>
+                                </button>
+                            )
+                        }}
+                    />
                 </div>
             </div>
         </div>

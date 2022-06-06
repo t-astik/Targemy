@@ -58,7 +58,7 @@
 .carousel__prev {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 0%;
     transform: translateY(-50%);
     border: none;
@@ -69,10 +69,14 @@
     cursor: pointer;
     position: absolute;
     right: 0%;
-    top: 50%;
+    top: 46%;
     transform: translateY(-50%);
     border: none;
-    background: no-repeat;
+    background: no-repeat; 
+}
+
+.carousel__next > img {
+    transform: rotate(180deg);
 }
 
 .carouselItem {
