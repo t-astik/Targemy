@@ -1,7 +1,6 @@
-import { useState, createRef } from 'react'
+import { useState } from 'react'
 
 import AliceCarousel from 'react-alice-carousel'
-import Slider from 'react-slick'
 import classNames from 'classnames'
 
 import { task, IColletion } from '../../data'
@@ -10,7 +9,6 @@ import { getImagePath } from '../task'
 import feed from '../../assets/images/feedMob.svg'
 import discussions from '../../assets/images/discussionMob.svg'
 import arrowPrev from '../../assets/images/arrowPrev.svg'
-import arrowNext from '../../assets/images/arrowNext.svg'
 
 import "react-alice-carousel/lib/alice-carousel.css"
 import "slick-carousel/slick/slick.css"
@@ -21,13 +19,6 @@ import styles from './styles.module.css'
 const Collections = () => {
 
     const [activeTabType, setActiveTabType] = useState<TabType>('feed')
-
-    const settings = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1     
-    }
 
     const responsive = {
         240: { items: 1 },
@@ -69,18 +60,6 @@ const Collections = () => {
     const handleTabClick = (tab: ITab) => () => {
         setActiveTabType(tab.type)
     }
-
-    // const sliderRef: any = createRef()
-
-    // const handleClickPrev = (e: any) => {
-    //     e.stopPropagation();
-    //     sliderRef.current.slidePrev();
-    // }
-
-    // const handleClickNext = (e: any) => {
-    //     e.stopPropagation();
-    //     sliderRef.current.slideNext();
-    // }
 
     return (
         <div className={styles.collectionContainer}>
