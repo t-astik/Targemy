@@ -9,6 +9,7 @@
     width: 390px;
     box-sizing: border-box;
     margin: 0 auto;
+    overflow-y: scroll;
 }
 
 @media (max-width: 390px) {
